@@ -24,3 +24,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.score-input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+
+.score-input {
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 70%;
+}
