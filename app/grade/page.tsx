@@ -59,7 +59,7 @@ const styles = {
   container: {
     padding: "40px",
     fontFamily: "Arial, Helvetica, sans-serif",
-    textAlign: "center",
+    textAlign: "center" as "center", // ระบุให้ชัดเจน
     backgroundColor: "#f4f7fc",
     borderRadius: "8px",
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
