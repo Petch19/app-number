@@ -1,6 +1,6 @@
 // Next.js Portfolio + Course Pages (App Router)
 // This file is suitable for app/page.js — a single-page course overview containing the 7 lesson units for BSCCT604
-import "./globals.css";
+import '../globals.css'; 
 
 export default function Home() {
   return (
