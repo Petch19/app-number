@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function CalculatePage() {
+export default function calculate() {
   const [num1, setNum1] = useState<string>("");
   const [num2, setNum2] = useState<string>("");
   const [result, setResult] = useState<number | null>(null);

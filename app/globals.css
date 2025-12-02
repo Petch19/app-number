@@ -1,41 +1,122 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* กำหนดพื้นฐานให้กับทุกๆ หน้า */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* กำหนดฟอนต์และสีพื้นฐาน */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;  /* พื้นหลังอ่อนๆ */
+  color: #333;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* กำหนดคอนเทนเนอร์หลัก */
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* เมนูด้านซ้าย (Sidebar) */
+.sidebar {
+  width: 220px;
+  background-color: #2e3b4e; /* สีพื้นหลังของเมนู */
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px; /* มุมโค้ง */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เงาเบาๆ */
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #1a2532; /* เมื่อวางเมาส์จะเปลี่ยนสี */
+}
+
+/* เนื้อหาหลัก (Main content) */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  margin-left: 20px;
+  border-radius: 10px; /* มุมโค้ง */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เงาเบาๆ */
+}
+
+/* ปรับขนาดหัวเรื่อง */
+h1 {
+  color: #2c3e50;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* เพิ่มสีพื้นหลังให้กับปุ่มหรือองค์ประกอบที่ต้องการ */
+button {
+  background-color: #4caf50; /* สีเขียว */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* แก้ไขการจัดระเบียบ unit */
+#units {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 คอลัมน์ */
+  gap: 20px; /* ช่องว่างระหว่างคอลัมน์ */
+}
+
+#units article {
+  min-height: 250px; /* กำหนดความสูงขั้นต่ำ */
+  padding: 20px;
+  border-radius: 15px; /* มุมโค้ง */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบาๆ */
+  border: 2px solid #4c8cf1; /* กรอบสีน้ำเงิน */
+  background-color: #fff;
+  overflow: hidden; /* ไม่ให้เนื้อหาทะลุกรอบ */
+}
+
+#units article p {
+  margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างย่อหน้า */
+}
+
+#units article ul {
+  padding-left: 20px; /* เพิ่มช่องว่างในรายการ */
+}
+
+/* การจัดการ layout บทเรียนตามขนาดหน้าจอ */
+@media (max-width: 1024px) {
+  #units {
+    grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.score-input::placeholder {
-  color: #000;
-  opacity: 1;
-}
-
-
-.score-input {
-  color: #000;
-  border: 1px solid #ddd;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
-  width: 70%;
+@media (max-width: 768px) {
+  #units {
+    grid-template-columns: 1fr; /* 1 คอลัมน์ */
+  }
 }

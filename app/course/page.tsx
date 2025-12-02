@@ -1,39 +1,41 @@
-// Next.js Portfolio + Course Pages (App Router)
-// This file is suitable for app/page.js — a single-page course overview containing the 7 lesson units for BSCCT604
-import "./globals.css";
+import "../globals.css";
 
-export default function Home() {
+export default function About() {
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-800 p-6 lg:p-12">
+    <main className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 text-gray-800 p-6 lg:p-12">
       {/* Header */}
       <header className="max-w-6xl mx-auto flex items-center justify-between py-6">
-        <h1 className="text-2xl font-extrabold">BSCCT604 — การบริหารเครือข่ายคอมพิวเตอร์</h1>
-        <nav className="flex gap-4">
-          <a href="#overview" className="hover:underline">ภาพรวม</a>
-          <a href="#unit1" className="hover:underline">บทที่ 1</a>
-          <a href="#unit2" className="hover:underline">บทที่ 2</a>
-          <a href="#unit3" className="hover:underline">บทที่ 3</a>
-          <a href="#unit4" className="hover:underline">บทที่ 4</a>
-          <a href="#unit5" className="hover:underline">บทที่ 5</a>
-          <a href="#unit6" className="hover:underline">บทที่ 6</a>
-          <a href="#unit7" className="hover:underline">บทที่ 7</a>
+        <h1 className="text-3xl font-extrabold text-blue-800">BSCCT604 — การบริหารเครือข่ายคอมพิวเตอร์</h1>
+        <nav className="flex gap-6 text-lg text-gray-700">
+          <a href="#overview" className="hover:text-blue-600 transition-colors">ภาพรวม</a>
+          <a href="#unit1" className="hover:text-blue-600 transition-colors">บทที่ 1</a>
+          <a href="#unit2" className="hover:text-blue-600 transition-colors">บทที่ 2</a>
+          <a href="#unit3" className="hover:text-blue-600 transition-colors">บทที่ 3</a>
+          <a href="#unit4" className="hover:text-blue-600 transition-colors">บทที่ 4</a>
+          <a href="#unit5" className="hover:text-blue-600 transition-colors">บทที่ 5</a>
+          <a href="#unit6" className="hover:text-blue-600 transition-colors">บทที่ 6</a>
+          <a href="#unit7" className="hover:text-blue-600 transition-colors">บทที่ 7</a>
         </nav>
       </header>
 
       {/* Overview */}
-      <section id="overview" className="max-w-6xl mx-auto bg-white rounded-2xl p-8 shadow mb-8">
-        <h2 className="text-2xl font-bold mb-2">ภาพรวมรายวิชา / Course Overview</h2>
-        <p className="leading-relaxed mb-4">รหัส: <strong>BSCCT604</strong> — ชื่อภาษาไทย: <em>การบริหารเครือข่ายคอมพิวเตอร์</em><br/>
-        หน่วยกิต: 3(2-2-5) — วิชาบังคับก่อน: <strong>BSCCT603</strong> (การสื่อสารข้อมูลและระบบเครือข่ายคอมพิวเตอร์)</p>
+      <section id="overview" className="max-w-6xl mx-auto bg-white rounded-2xl p-8 shadow-lg mb-8">
+        <h2 className="text-2xl font-bold mb-2 text-blue-700">ภาพรวมรายวิชา / Course Overview</h2>
+        <p className="leading-relaxed mb-4 text-gray-600">
+          รหัส: <strong>BSCCT604</strong> — ชื่อภาษาไทย: <em>การบริหารเครือข่ายคอมพิวเตอร์</em><br />
+          หน่วยกิต: 3(2-2-5) — วิชาบังคับก่อน: <strong>BSCCT603</strong> (การสื่อสารข้อมูลและระบบเครือข่ายคอมพิวเตอร์)
+        </p>
 
-        <p className="text-sm text-gray-600">EN: Study and practice in installation and setup of computer network with various applications, routing, assignment of static and dynamic IP addresses, wireless network system, computer network security, virtual private network design, and application of computer network in various types of organization.</p>
+        <p className="text-sm text-gray-600">
+          EN: Study and practice in installation and setup of computer network with various applications, routing, assignment of static and dynamic IP addresses, wireless network system, computer network security, virtual private network design, and application of computer network in various types of organization.
+        </p>
       </section>
 
       {/* Units grid */}
-      <section id="units" className="max-w-6xl mx-auto grid gap-6">
+      <section id="units" className="max-w-6xl mx-auto grid gap-8">
         {/* Unit 1 */}
-        <article id="unit1" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 1 — การติดตั้งและการตั้งค่าเครือข่ายคอมพิวเตอร์</h3>
+        <article id="unit1" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 1 — การติดตั้งและการตั้งค่าเครือข่ายคอมพิวเตอร์</h3>
           <p className="mb-3">เนื้อหา: การติดตั้งอุปกรณ์เครือข่าย (Switch, Router, Access Point), การต่อสาย, การตั้งค่า IP Address, Subnet Mask, Default Gateway และการตรวจสอบการเชื่อมต่อ (ping, traceroute)</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Hands-on: ตั้งค่า IP บนอุปกรณ์ Windows/Linux</li>
@@ -43,8 +45,8 @@ export default function Home() {
         </article>
 
         {/* Unit 2 */}
-        <article id="unit2" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 2 — การกำหนดเส้นทาง (Routing)</h3>
+        <article id="unit2" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 2 — การกำหนดเส้นทาง (Routing)</h3>
           <p className="mb-3">เนื้อหา: แนวคิด routing, Routing Table, การตั้งค่า static route, dynamic routing protocols เช่น RIP, OSPF, และการวิเคราะห์เส้นทาง</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Lab: ตั้งค่า static routing ระหว่าง subnet</li>
@@ -54,8 +56,8 @@ export default function Home() {
         </article>
 
         {/* Unit 3 */}
-        <article id="unit3" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 3 — การจัดสรร IP Address</h3>
+        <article id="unit3" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 3 — การจัดสรร IP Address</h3>
           <p className="mb-3">เนื้อหา: การออกแบบ IP scheme, การแบ่ง subnet, การจ่าย IP แบบคงที่ (Static) และแบบพลวัต (DHCP)</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Exercise: ออกแบบ IPv4 subnet สำหรับองค์กรสมมติ</li>
@@ -65,8 +67,8 @@ export default function Home() {
         </article>
 
         {/* Unit 4 */}
-        <article id="unit4" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 4 — ระบบเครือข่ายไร้สาย (Wireless Network)</h3>
+        <article id="unit4" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 4 — ระบบเครือข่ายไร้สาย (Wireless Network)</h3>
           <p className="mb-3">เนื้อหา: การติดตั้ง Access Point, ตัดสินใจตำแหน่ง (site survey), ช่องสัญญาณ (channels), SSID, WPA/WPA2/WPA3, และการบริหารจัดการเครือข่ายไร้สาย</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Lab: ตั้งค่า AP และทดสอบการเชื่อมต่อจากอุปกรณ์หลายชนิด</li>
@@ -76,8 +78,8 @@ export default function Home() {
         </article>
 
         {/* Unit 5 */}
-        <article id="unit5" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 5 — ความปลอดภัยในเครือข่าย</h3>
+        <article id="unit5" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 5 — ความปลอดภัยในเครือข่าย</h3>
           <p className="mb-3">เนื้อหา: Firewall, IDS/IPS, การเข้ารหัส, การจัดการแพตช์, การป้องกันภัยคุกคาม และแนวทางปฏิบัติที่ปลอดภัยในองค์กร</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Lab: ตั้งค่า basic firewall rules และ NAT</li>
@@ -87,8 +89,8 @@ export default function Home() {
         </article>
 
         {/* Unit 6 */}
-        <article id="unit6" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 6 — การออกแบบ VPN</h3>
+        <article id="unit6" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 6 — การออกแบบ VPN</h3>
           <p className="mb-3">เนื้อหา: แนวคิด VPN, IPSec, SSL VPN, site-to-site และ remote-access VPN, การตั้งค่าและการทดสอบการเชื่อมต่อที่ปลอดภัย</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Lab: สร้าง site-to-site VPN ระหว่าง Router สองตัว</li>
@@ -98,8 +100,8 @@ export default function Home() {
         </article>
 
         {/* Unit 7 */}
-        <article id="unit7" className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold mb-2">บทที่ 7 — การประยุกต์ใช้เครือข่ายคอมพิวเตอร์ในองค์กรต่าง ๆ</h3>
+        <article id="unit7" className="bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-500">
+          <h3 className="text-xl font-semibold mb-2 text-blue-700">บทที่ 7 — การประยุกต์ใช้เครือข่ายคอมพิวเตอร์ในองค์กรต่าง ๆ</h3>
           <p className="mb-3">เนื้อหา: การออกแบบเครือข่ายตามขนาดองค์กร (SME, Enterprise), การแบ่ง VLAN, QoS, นโยบายการสำรองข้อมูล และการบริหารจัดการเครือข่าย</p>
           <ul className="list-disc pl-6 text-sm text-gray-700">
             <li>Case: ออกแบบเครือข่ายสำหรับออฟฟิศขนาดเล็กถึงขนาดกลาง</li>
@@ -109,17 +111,17 @@ export default function Home() {
         </article>
       </section>
 
-      {/* Footer + quick links */}
-      <footer className="max-w-6xl mx-auto mt-10 text-sm text-gray-600">
+      {/* Footer */}
+      <footer className="max-w-6xl mx-auto mt-12 text-sm text-gray-600">
         <div className="flex flex-col md:flex-row md:justify-between gap-4 items-start md:items-center">
           <div>หากต้องการ: ตัวอย่าง Lab scripts, ไฟล์ config, หรือ topology diagram บอกได้เลย ผมจะเพิ่มให้เป็นไฟล์ดาวน์โหลด</div>
           <div className="flex gap-4">
-            <a href="#unit1" className="underline">Jump to Unit 1</a>
-            <a href="#unit4" className="underline">Wireless Lab</a>
-            <a href="#unit6" className="underline">VPN Lab</a>
+            <a href="#unit1" className="underline hover:text-blue-600 transition-colors">Jump to Unit 1</a>
+            <a href="#unit4" className="underline hover:text-blue-600 transition-colors">Wireless Lab</a>
+            <a href="#unit6" className="underline hover:text-blue-600 transition-colors">VPN Lab</a>
           </div>
         </div>
-        <p className="mt-6">© 2025 คณะ / ผู้สอน</p>
+        <p className="mt-6 text-center">© 2025 คณะ / ผู้สอน</p>
       </footer>
     </main>
   );
