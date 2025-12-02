@@ -1,8 +1,12 @@
-// app/layout.js
 import './globals.css'; // ไฟล์สไตล์ทั่วไป
 import Link from 'next/link';
+import { ReactNode } from 'react'; // นำเข้า ReactNode เพื่อกำหนดประเภทของ children
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode; // กำหนด type ให้กับ children
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="th"> {/* กำหนดภาษาเป็นภาษาไทย */}
       <head>
